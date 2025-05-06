@@ -1,0 +1,411 @@
+body {
+    height: 100vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  
+  header p {
+    font-family: "Sacramento", cursive;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .title-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: 120px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  
+  .title {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #D34A24;
+  }
+
+  a.highlight-title {
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; 
+    display:flex;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    text-align: center; 
+    font-size: 40px; 
+    color:#AD473A;
+}
+
+a.highlight-title:hover {
+    color: #FF6347; 
+}
+
+
+  
+  /* Navbar */
+  nav {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    padding: 30px 40px; 
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgb(249, 246, 239);
+    z-index: 1000;
+  }
+  
+  /* UL inside nav */
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  /* List items */
+  nav ul li {
+    position: relative;
+  }
+  
+  /* All links and button */
+  nav ul li a, .dropbtn {
+    border-radius: 12px;
+    display: inline-block;
+    position: relative;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #342f21;
+    background: none;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover effect */
+  nav ul li a:hover, .dropbtn:hover {
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    font-size: 1.1rem;
+    background-color: rgb(50, 44, 44);
+    color: white;
+  }
+  
+  /* Active link and button */
+  nav ul li a.active, .dropbtn.active {
+    background-color: #D34A24;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
+  
+  /* Dropdown */
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  /* Dropdown Content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7c7a75;
+    min-width: 160px;
+    margin-top: 5px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  
+  /* Dropdown links */
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  
+  /* Hover inside dropdown */
+  .dropdown-content a:hover {
+    background-color: #342f21;
+  }
+  
+  /* Show dropdown when hovering or clicking */
+  .dropdown:hover .dropdown-content,
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    nav {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+  
+  /*article*/
+  .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 50px auto;
+      background: RGB(249, 246, 239);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .description {
+      width: 50%;
+      padding: 20px;
+      text-align: left;
+      text-indent: 40px;
+      text-align: justify;
+      font-family: "Quicksand", sans-serif;
+  }
+  
+  .h2 {
+      font-family: "Playfair Display", serif;
+      text-align: center; 
+      font-size: 40px; 
+      color:#AD473A;
+  }
+  
+  .h3 {
+      font-family: "Playfair Display", serif;
+      text-align: center; 
+      font-size: 30px; 
+      color:RGB(102, 74, 50); 
+  }
+  
+  .container {
+    display: flex;
+    align-items: flex-start; /* <<< align items at the TOP */
+    justify-content: center; /* space between text and image */
+    margin-bottom: 50px; /* space between sections */
+    flex-wrap: wrap; /* mobile-friendly */
+}
+
+.description {
+    flex: 1; /* takes up 50% */
+    padding: 20px;
+    min-width: 300px; /* responsive */
+}
+
+.right-content {
+    flex: 1; /* takes up 50% */
+    text-align: center;
+    padding: 20px;
+    min-width: 300px; /* responsive */
+}
+
+.static-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* optional: makes image corners slightly rounded */
+}
+
+  
+  .right-content .description {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  /* Optional: Hide other images except the first if you're not doing auto-slideshow */
+  .slide:not(:first-child) {
+    display: none;
+  }
+  
+  
+  .music-links {
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+  }
+  
+  .music-links a {
+      display: block;
+      width: 80%;
+      margin: 5px auto;
+      padding: 8px;
+      background: #342f21;
+      color: #F3F2F2;;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      font-family: "Quicksand", sans-serif;
+  }
+  
+  .music-links a:hover {
+      background: #5c5441;
+  }
+  
+  footer {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 20px;
+    background: RGB(249, 246, 239);
+}
+
+footer h3 {
+    font-family: "Sacramento", cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: 20px;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack the columns on small screens */
+    }
+}
+
+.f-aboutme {
+    text-align: justify;
+    text-indent: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+.f-connected {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+}
+
+.f-connected input {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 4px;
+    color: black;
+    width: 45%; /* Make input full-width */
+}
+
+.f-connected button {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 5px;
+    transition: 0.3s;
+    width: 25%; /* Make button full-width */
+}
+
+.f-connected button:hover {
+    background: #342f21;
+    color: whitesmoke;
+}
+
+.thank-you-message {
+    font-family: "Quicksand", sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d94f00;
+}
+
+.f-nav {
+    justify-content: center;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+.footer-nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+}
+
+.footer-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav li a {
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer-nav li a:hover {
+    transform: scale(1.05);
+    background-color: rgb(50, 44, 44);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.socmed {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.footer-img {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.footer-copyright {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(50, 44, 44);
+}

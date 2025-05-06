@@ -1,0 +1,310 @@
+body {
+    height: 100vh;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+header p {
+    font-family: "Sacramento", cursive;
+    font-style: italic;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.title-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    margin-top: 120px;
+}
+  
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+}
+  
+.title {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #D34A24;
+}
+
+nav {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    padding: 30px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: RGB(249, 246, 239);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    border-radius: 12px;
+    display: inline-block; /*shadow/hover only around the text*/
+    position: relative; /*Other content around is not affected when hover is used*/
+    justify-content: space-between;  /* Aligns items horizontally */
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none; /*remove bullet points*/
+    transition: all 0.3s ease; 
+    z-index: 1; /*This makes sure the box element stays above other content*/
+    font-size: 1rem;
+    color: #342f21;
+}
+
+li a:hover {
+    border-radius: 12px; /*smooth edges*/
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /*make smaller or bigger*/
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: rgb(50, 44, 44);
+    color: white;
+}
+
+nav ul li a.active {
+    color: white;
+    background-color: #D34A24;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    nav {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+}
+
+.socmed-container {
+    display: flex;
+    align-items: center;     /* Center the items horizontally */
+    gap: 50px;               /* Add space between items */
+    justify-content: center;
+    height: 100vh;           /* Make sure the container takes full viewport height */
+    margin-top: 20px;
+}
+
+.socmed-item {
+    display: flex;
+    align-items: center;     /* Center-align logo and name */
+}
+
+.socmed-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;  /* Make the logo round */
+    margin-bottom: 10px; /* Space between logo and text */
+}
+
+.socmed-item a {
+    text-decoration: none; 
+    text-align: center; 
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    display: inline-block; 
+    transition: all 0.3s ease; 
+}
+
+.socmed-item a:hover {
+    color: #342f21;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgb(255, 255, 255);
+    transform: scale(1.05); 
+    font-size: 1.1rem; 
+}
+
+.socmed-item span {
+    font-size: 1rem;
+    color: #342f21;
+}
+
+@media (max-width: 768px) {
+    .socmed-container {
+        gap: 10px; /* Adjust the gap for smaller screens */
+    }
+
+    .socmed-logo {
+        width: 35px;  /* Reduce logo size on smaller screens */
+        height: 35px;
+    }
+
+    .socmed-item a {
+        font-size: 0.9rem;  /* Reduce text size on smaller screens */
+    }
+}
+
+footer {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 20px;
+    background: RGB(249, 246, 239);
+}
+
+footer h3 {
+    font-family: "Sacramento", cursive;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-right: 20px;
+    margin-left: 20px;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack the columns on small screens */
+    }
+}
+
+.f-aboutme {
+    text-align: justify;
+    text-indent: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+.f-connected {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 15px;
+}
+
+.f-connected input {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 4px;
+    color: black;
+    width: 45%; /* Make input full-width */
+}
+
+.f-connected button {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 5px;
+    transition: 0.3s;
+    width: 25%; /* Make button full-width */
+}
+
+.f-connected button:hover {
+    background: #342f21;
+    color: whitesmoke;
+}
+
+.thank-you-message {
+    font-family: "Quicksand", sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #d94f00;
+}
+
+.f-nav {
+    justify-content: center;
+    align-items: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+}
+
+.footer-nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+}
+
+.footer-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav li a {
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.footer-nav li a:hover {
+    transform: scale(1.05);
+    background-color: rgb(50, 44, 44);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.socmed {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.footer-img {
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    margin-top: 40px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 480px) {
+    .footer-img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.footer-copyright {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(50, 44, 44);
+}
